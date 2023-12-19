@@ -1,41 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/17 15:18:25 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/19 14:14:45 by ayael-ou         ###   ########.fr       */
+/*   Created: 2023/12/19 14:17:11 by ayael-ou          #+#    #+#             */
+/*   Updated: 2023/12/19 20:21:55 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EASYFIND_HPP
-#define EASYFIND_HPP
+#ifndef SPAN_HPP
+#define SPAN_HPP
 
 #include <vector>
-#include <iostream>
+#include <string>
 #include <algorithm>
 
-
-class   IsNotFound : public std::exception
+class Span
 {
+    private:
+    std::vector<int> _v;
+    unsigned int      N;
+    
+    public:
+    Span();
+    ~Span();
+    void    AddNumber(int number);
+    unsigned int shortestSpan();
+    unsigned int longestSpan();
 
-    public :  
-    const char *what() const throw()
-    {
-        return ("Is not found in container");
-    }
+    // class No  appel a std::run time error (vas te renseigner)
 };
 
-template<class T>
-typename T::iterator easyfind(T &container, int nb)
-{
-    typename T::iterator it = find(container.begin(), container.end(), nb);
-
-    if (it == container.end())
-        throw IsNotFound();
-    return (it);
-}
 
 #endif

@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/12/17 15:17:26 by ayael-ou          #+#    #+#              #
-#    Updated: 2023/12/19 14:16:05 by ayael-ou         ###   ########.fr        #
+#    Created: 2023/12/19 14:15:51 by ayael-ou          #+#    #+#              #
+#    Updated: 2023/12/19 14:16:31 by ayael-ou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = EasyFind
+NAME = Span
 
 SRC_DIR = ./
 SRCS = 	main.cpp\

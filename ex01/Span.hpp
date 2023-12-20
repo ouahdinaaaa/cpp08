@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:17:11 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/19 20:21:55 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/20 20:14:41 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <iostream>
 
 class Span
 {
@@ -24,12 +25,22 @@ class Span
     unsigned int      N;
     
     public:
-    Span();
+    Span(unsigned int N);
     ~Span();
-    void    AddNumber(int number);
-    unsigned int shortestSpan();
-    unsigned int longestSpan();
+    void    addNumber(int number);
+    int     shortestSpan();
+    int     longestSpan();
+    void    Add(int number);
+    void    Affichage();
+    
+    class   NoplaceInVector : public std::exception
+    {
+        const char *what() const throw()
+        {
+            return "The containers is full" ;
+        }
 
+    };
     // class No  appel a std::run time error (vas te renseigner)
 };
 

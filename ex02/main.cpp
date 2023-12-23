@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 20:25:03 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/22 11:54:22 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/23 12:36:59 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ int main() {
     --it;
     while (it != ite)
     {
-        std::cout << *it << std::endl;
+        std::cout << "nb in stack : " << *it << std::endl;
         ++it;
     }
-
+    std::cout << "size of stack after push : " << mstack.size() << std::endl;
     // Utilisation de std::stack
     std::stack<int> s(mstack);
 
@@ -64,9 +64,10 @@ int main() {
     --lit;
     while (lit != lite)
     {
-        std::cout << *lit << std::endl;
+        std::cout << "nb in list : " << *lit << std::endl;
         ++lit;
     }
+    std::cout << "size of list after push : " << llist.size() << std::endl;
 
     // Utilisation de std::list
     std::list<int> slist(llist);

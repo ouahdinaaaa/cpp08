@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:13:52 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/19 14:13:53 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/23 12:24:54 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int main()
 
 	try
 	{
-		std::list<int>::iterator it_list = easyfind(list, 19);
+		std::list<int>::iterator it_list = easyfind(list, 55);
 		std::cout << "List starting at 19:" << std::endl;
 		for_each(it_list, list.end(), print);
 	}
